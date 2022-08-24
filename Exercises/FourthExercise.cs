@@ -34,7 +34,7 @@ public class FourthExercise : Exercise {
             var month = calendar[i];
             var monthString = new DateTime(dateTime.Year, i + 1, 1).ToString("MMMM");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write($"{monthString}: ".PadRight(2));
+            Console.Write($"{monthString}:".PadRight(12));
             foreach (var day in month) {
                 Console.BackgroundColor = day.GetColor();
                 Console.Write(day.GetSymbol());

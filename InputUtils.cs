@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace App20220501 {
+﻿namespace App20220809 {
    public static class InputUtils {
       
       public static bool GetBool(string text) {
@@ -51,7 +47,8 @@ namespace App20220501 {
             }
             var selected = elements[result - 1];
             if(condition == null || condition(selected)) return selected;
-            Console.Write("Invalid input. Please try again.");
+            Console.Write("El valor ingresado no es valido, intenta de nuevo..");
+            Console.WriteLine();
          }
       }
       
@@ -60,7 +57,7 @@ namespace App20220501 {
             Console.Write(text);
             var result = Console.ReadLine();
             if(condition == null || condition(result)) return result;
-            Console.WriteLine("Invalid input. Please try again.");
+            Console.WriteLine("El valor ingresado no es valido, intenta de nuevo..");
          }
       }
 
@@ -68,7 +65,7 @@ namespace App20220501 {
          while(true) {
             Console.Write(text);
             if(int.TryParse(Console.ReadLine(), out var number) && (condition == null || condition(number))) return number;
-            Console.WriteLine("Invalid input. Try again.");
+            Console.WriteLine("El valor ingresado no es valido, intenta de nuevo.");
          }
       }
 
@@ -76,7 +73,7 @@ namespace App20220501 {
          while(true) {
             Console.Write(text);
             if(double.TryParse(Console.ReadLine(), out var number) && (condition == null || condition(number))) return number;
-            Console.WriteLine("Invalid input. Try again.");
+            Console.WriteLine("El valor ingresado no es valido, intenta de nuevo.");
          }
       }
 
@@ -86,7 +83,7 @@ namespace App20220501 {
             var readLine = Console.ReadLine();
             if(readLine == null || readLine.Trim() == "") return null;
             if(double.TryParse(readLine, out var number) && (condition == null || condition(number))) return number;
-            Console.WriteLine("Invalid input. Try again.");
+            Console.WriteLine("El valor ingresado no es valido, intenta de nuevo.");
          }
       }
 
@@ -97,7 +94,7 @@ namespace App20220501 {
             var readLine = Console.ReadLine();
             if(readLine == null || readLine.Trim() == "") return null;
             if(int.TryParse(readLine, out var number) && (condition == null || condition(number))) return number;
-            Console.WriteLine("Invalid input. Try again.");
+            Console.WriteLine("El valor ingresado no es valido, intenta de nuevo.");
          }
       }
       

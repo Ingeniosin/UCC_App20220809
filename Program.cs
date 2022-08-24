@@ -5,6 +5,7 @@ var exercises = new List<Exercise>{
     new FirstExercise(),
     new SecondExcersise(),
     new ThirdExercise(),
+    new FourthExercise(),
 };
 
 while (true){

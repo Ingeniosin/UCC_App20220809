@@ -74,11 +74,11 @@ public static class TypesExtension {
     
     public static ConsoleColor GetColor(this Types type) {
         return type switch{
-            Types.Bus => ConsoleColor.Blue,
-            Types.Bike => ConsoleColor.Green,
-            Types.Car => ConsoleColor.Red,
-            Types.Train => ConsoleColor.Yellow,
-            Types.Walk => ConsoleColor.White,
+            Types.Bus => ConsoleColor.DarkGreen,
+            Types.Bike => ConsoleColor.DarkBlue,
+            Types.Car => ConsoleColor.DarkRed,
+            Types.Train => ConsoleColor.DarkMagenta,
+            Types.Walk => ConsoleColor.DarkYellow,
             _ => ConsoleColor.White
         };
     }
